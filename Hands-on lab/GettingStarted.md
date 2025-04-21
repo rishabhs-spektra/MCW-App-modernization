@@ -35,7 +35,7 @@ In this hands-on lab, the architecture flow begins by using Azure Migrate to ass
 
 ## Architecture Diagram
 
-![This solution diagram includes a high-level overview of the architecture implemented within this hands-on lab.](media/architecture-diagram.png "Solution architecture diagram")
+![This solution diagram includes a high-level overview of the architecture implemented within this hands-on lab.](media/architecture-diagram-1.png "Solution architecture diagram")
 
 ## Explanation of Components
 
@@ -120,6 +120,6 @@ Learner Support Contacts:
  
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-![](media/next_button.png "Next")
+![](media/next-page.png "Next")
 
 ## Happy Learning!!
