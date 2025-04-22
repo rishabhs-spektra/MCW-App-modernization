@@ -5,7 +5,7 @@ Welcome to your MCW-App-Modernization workshop! We've prepared a seamless enviro
  
 ## **Accessing Your Lab Environment**
  
-Once you're ready to dive in, your virtual machine and **Lab Guide** will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
 ![](media/GS6.png "Lab Environment")
 

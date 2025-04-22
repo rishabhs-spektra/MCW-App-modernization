@@ -63,9 +63,9 @@ Welcome to your Migrate .NET Apps to Azure App Service Lab! We've prepared a com
 
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and **Lab Guide** will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-   ![Create storage by clicking confirm.](media/m1.png)  
+   ![Create storage by clicking confirm.](media/GS6.png)  
 
 ## Utilizing the Zoom In/Out Feature
 

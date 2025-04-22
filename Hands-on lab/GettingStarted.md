@@ -52,7 +52,7 @@ In this hands-on lab, the architecture flow begins by using Azure Migrate to ass
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the lab guide bottom area to switch to different exercises of the lab guide.
    
 
-   ![](media/Getting_started01.png "Lab Environment")
+   ![](media/GS6.png "Lab Environment")
 
 1. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your email address provided during registration. Also, you can start, stop, and restart virtual machines from the **Resources** tab.
 
