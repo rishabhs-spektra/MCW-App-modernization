@@ -150,7 +150,7 @@ In this task, you will retrieve the Fully Qualified Domain Name for the Azure SQ
 
    ![](media/m28.png)
 
-1. Navigate to your **SQL database** resource by selecting the **parts** SQL database resource from the resources list.
+1. Navigate to your **SQL database** resource by selecting the **parts SQL database ** resource from the resources list.
 
    ![](media/updated44.png)
 
@@ -281,7 +281,7 @@ At this point, you have migrated the database schema using DMA. In this task, yo
 
     ![](media/m41.png)
 
-1. After successful installation it will ask you for the authentication key which we copied from the Azure portal, please provide the copied key **(1)** , and click on **Register (2)**.
+1. After successful installation, it will ask you for the authentication key which we copied from the Azure portal, please provide the copied key **(1)** , and click on **Register (2)**.
 
    ![The Migration Wizard Select source blade is displayed, with the values specified above entered into the appropriate fields.](media/m42.png "Migration Wizard Select source")
 
@@ -289,7 +289,7 @@ At this point, you have migrated the database schema using DMA. In this task, yo
 
    ![The Migration Wizard Select source blade is displayed, with the values specified above entered into the appropriate fields.](images/01-04-2024(11).png "Migration Wizard Select source")
 
-1. Once the Integration Runtime (Self-hosted) node has been **registered successfully**, minimize the SQLVM rdp window.
+1. Once the Integration Runtime (Self-hosted) node has been **registered successfully**, minimize the SQLVM RDP window.
     
     ![](images/Microsoft_Integration_Runtime_auth.png)
 
@@ -297,24 +297,18 @@ At this point, you have migrated the database schema using DMA. In this task, yo
 
    ![The Migration Wizard Select source blade is displayed, with the values specified above entered into the appropriate fields.](images/After_integration_setup.png "Migration Wizard Select source")
 
-
 1. On the Migration Wizard **Source details** Blade, enter the following:
 
-    - **Source Infrastructure Type**: Select **Virtual Machine** **(1)**.
-    
-    - **Subscription**: Select the avaliable Subscription **(2)**.
-    
-    - **Resource group**: Select **hands-on-lab-<inject key="DeploymentID" enableCopy="false"/>** **(3)**.
-    
-    - **Location** : select **East US** **(4)**.
-    
-    - **SQL Server Instance Name**: Enter **sqlvm<inject key="DeploymentID" enableCopy="false"/>** **(5)**.
+   - **Source Infrastructure Type**: Select **Virtual Machine** **(1)**. 
+   - **Subscription**: Select the avaliable Subscription **(2)**.
+   - **Resource group**: Select **hands-on-lab-<inject key="DeploymentID" enableCopy="false"/>** **(3)**.
+   - **Location** : select **East US** **(4)**.
+   - **SQL Server Instance Name**: Enter **sqlvm<inject key="DeploymentID" enableCopy="false"/>** **(5)**.
+   - Select **Next: Connect to source SQL Server >>** **(6)**.
 
-    - Select **Next: Connect to source SQL Server >>** **(6)**.
+     ![](images/Source_details.png)
 
-        ![](images/Source_details.png)
-
-        > **Note**: If you encounter with an validation error `Failed to create SQL Server instance. Insufficient permissions to register resource provider Microsoft.AzureArcData` close the error and continue with the next step.
+     > **Note**: If you encounter a validation error `Failed to create SQL Server instance. Insufficient permissions to register resource provider Microsoft.AzureArcData` closes the error and continues with the next step.
 
 1. On the Migration Wizard **Select source** Blade, enter the following:
 
@@ -341,9 +335,9 @@ At this point, you have migrated the database schema using DMA. In this task, yo
 
 1. On the Migration Wizard **Select target** Blade, enter the following:
 
-    - **Subscription**: Leave the default Subscription **(1)**
+   - **Subscription**: Leave the default Subscription **(1)**
     
-    - **Resource Group**: Select your **hands-on-lab-<inject key="DeploymentID" enableCopy="false"/>** resource group **(2)**
+   - **Resource Group**: Select your **hands-on-lab-<inject key="DeploymentID" enableCopy="false"/>** resource group **(2)**
 
     - **Target Azure SQL Database Server**: Select **<inject key="sqlDatabaseName" 	enableCopy="false"/> (3)**
     
@@ -365,7 +359,7 @@ At this point, you have migrated the database schema using DMA. In this task, yo
 
 1. On the Migration Wizard **Configure migration settings** Blade, expand the **PartsUnlimited** database, verify all the tables are selected **(1)** and select **Next: Database migration Summary >> (2)**.
 
-    > **Note**: If you see that table data cannot be migrated, the source table is empty. it is completely fine please select the tables that are not greyed out or the table has data in it.
+    > **Note**: If you see that the table data cannot be migrated, the source table is empty. It is completely fine, please select the tables that are not greyed out or the table has data in it.
 
     ![The Migration Wizard Configure migration settings blade is displayed, with the expand arrow for PartsUnlimited highlighted, and all the tables checked.](images/select-table-migrate.png "Migration Wizard Configure migration settings")
 
