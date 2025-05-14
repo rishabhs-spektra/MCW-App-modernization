@@ -83,7 +83,7 @@ Parts Unlimited would like an assessment to see what potential issues they might
     - **Trust server certificate**: Check this box **(6)**.
     - Select **Connect (7)**.
 
-    ![In the Connect to a server dialog, the values specified above are entered into the appropriate fields.](media/m20.png "Connect to a server")
+        ![In the Connect to a server dialog, the values specified above are entered into the appropriate fields.](images/m20new.png "Connect to a server")
 
 1. In the **Add sources** dialog that appears next, check the box for `PartsUnlimited` **(1)** and select **Add (2)**.
 
@@ -113,11 +113,16 @@ Parts Unlimited would like an assessment to see what potential issues they might
 
 1. Please use the  below credentials to login.
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
+
+        ![](images/login-username.png)
+
     * Password: <inject key="AzureAdUserPassword"></inject>
 
-    ![Azure is selected as the Azure Environment on the connect to Azure screen. Connect button is highlighted.](media/m--25.png "Azure Environment Selection")
+        ![](images/login-password.png)
 
 1. Click on **Yes**, if any pop up appears.
+
+    ![](images/securityupdate.png)
 
 1. Select your subscription **(1)** and the **partsunlimitedweb<inject key="DeploymentID" enableCopy="false"/>** Azure Migrate project **(2)**. Select **Upload (3)** to start the upload to Azure.
 
@@ -168,7 +173,7 @@ After you have reviewed the assessment results and you have ensured the database
    - **Migration scope (3)**: Select **Schema only (5)**.
    - Select **Create (6)**.
 
-   ![The above information is entered in the New project dialog box.](media/m29.png "New Project dialog")
+        ![The above information is entered in the New project dialog box.](media/m29.png "New Project dialog")
 
 1. On the **Select source** tab, enter the following:
 
@@ -181,7 +186,7 @@ After you have reviewed the assessment results and you have ensured the database
    - Select **Connect (7)**, and then ensure the `PartsUnlimited` database is selected **(8)** from the list of databases.
    - Select **Next (9)**.
 
-   ![The Select source tab of the Data Migration Assistant is displayed, with the values specified above entered into the appropriate fields.](media/m30.png "Data Migration Assistant Select source")
+        ![The Select source tab of the Data Migration Assistant is displayed, with the values specified above entered into the appropriate fields.](media/m30.png "Data Migration Assistant Select source")
 
 1. On the **Select target** tab, enter the following:
 
@@ -194,7 +199,7 @@ After you have reviewed the assessment results and you have ensured the database
    - Select **Connect (7)**, and then ensure the `parts` database is selected **(8)** from the list of databases.
    - Select **Next (9)**.
 
-   ![The Select target tab of the Data Migration Assistant is displayed, with the values specified above entered into the appropriate fields.](media/m31.png "Data Migration Assistant Select target")
+        ![The Select target tab of the Data Migration Assistant is displayed, with the values specified above entered into the appropriate fields.](media/m31.png "Data Migration Assistant Select target")
 
 1. On the **Select objects** tab, leave all the objects checked **(1)**, and select **Generate SQL script (2)**.
 
@@ -233,7 +238,7 @@ After you have reviewed the assessment results and you have ensured the database
     - **Remember password**: Check this box **(5)**.
     - Select **Connect (6)**.
 
-    ![The SSMS Connect to Server dialog is displayed, with the Azure SQL Database name specified, SQL Server Authentication selected, and the demouser credentials entered.](media/m37.png "Connect to Server")
+        ![The SSMS Connect to Server dialog is displayed, with the Azure SQL Database name specified, SQL Server Authentication selected, and the demouser credentials entered.](media/m37.png "Connect to Server")
 
 1. Once connected, expand **Databases (1)**, and expand **parts (2)**, then expand **Tables (3)**, and observe the schema that has been created **(4)**. 
 
@@ -257,7 +262,7 @@ At this point, you have migrated the database schema using DMA. In this task, yo
 
 1. On the Azure Database Migration Service Blade, select **+ New Migration**.
 
-    ![](media/click_new_migration_DMS.png)
+    ![](images/addnewmigrtation.png)
 
 1. On the New migration project Blade, enter the following:
 
@@ -292,6 +297,25 @@ At this point, you have migrated the database schema using DMA. In this task, yo
 
    ![The Migration Wizard Select source blade is displayed, with the values specified above entered into the appropriate fields.](images/After_integration_setup.png "Migration Wizard Select source")
 
+
+1. On the Migration Wizard **Source details** Blade, enter the following:
+
+    - **Source Infrastructure Type**: Select **Virtual Machine** **(1)**.
+    
+    - **Subscription**: Select the avaliable Subscription **(2)**.
+    
+    - **Resource group**: Select **hands-on-lab-<inject key="DeploymentID" enableCopy="false"/>** **(3)**.
+    
+    - **Location** : select **East US** **(4)**.
+    
+    - **SQL Server Instance Name**: Enter **sqlvm<inject key="DeploymentID" enableCopy="false"/>** **(5)**.
+
+    - Select **Next: Connect to source SQL Server >>** **(6)**.
+
+        ![](images/Source_details.png)
+
+        > **Note**: If you encounter with an validation error `Failed to create SQL Server instance. Insufficient permissions to register resource provider Microsoft.AzureArcData` close the error and continue with the next step.
+
 1. On the Migration Wizard **Select source** Blade, enter the following:
 
    - **Source SQL Server instance name**: Enter the Private IP address of SqlServer2022. **(1)**.  
@@ -309,11 +333,11 @@ At this point, you have migrated the database schema using DMA. In this task, yo
    
    - Select **Next: Select databases for migration** **(6)**. 
   
-     ![The Migration Wizard Select source blade is displayed, with the values specified above entered into the appropriate fields.](media/m44.png "Migration Wizard Select source")
+     ![The Migration Wizard Select source blade is displayed, with the values specified above entered into the appropriate fields.](images/connect_to_source.png "Migration Wizard Select source")
    
 1. Select **PartsUnlimited (1)** databases. Select **Next: Connect to target Azure SQL Database >> (2)** to continue.
     
-    ![The Migration Wizard Select database blade is displayed. PartsUnlimited databases is selected. Next: Select target >> button is highlighted.](media/m45.png "Migration Wizard Select databases")
+    ![The Migration Wizard Select database blade is displayed. PartsUnlimited databases is selected. Next: Select target >> button is highlighted.](images/select_destination.png "Migration Wizard Select databases")
 
 1. On the Migration Wizard **Select target** Blade, enter the following:
 
@@ -333,21 +357,21 @@ At this point, you have migrated the database schema using DMA. In this task, yo
     
     - Select **Next: Map source and target databases >> (8)**.
     
-        ![](media/m46.png )
+        ![](images/connect-to-target.png)
 
 1. On the Migration Wizard **Map to target databases** Blade, confirm that **PartsUnlimited (1)** is checked as the source database, and **parts (2)** is the target database on the same line, then select **Next: Select database tables to migrate >> (3)**.
 
-    ![The Migration Wizard Map to target database blade is displayed, with the ContosoInsurance line highlighted.](media/m47.png "Migration Wizard Map to target databases")
+    ![The Migration Wizard Map to target database blade is displayed, with the ContosoInsurance line highlighted.](images/map-source.png "Migration Wizard Map to target databases")
 
 1. On the Migration Wizard **Configure migration settings** Blade, expand the **PartsUnlimited** database, verify all the tables are selected **(1)** and select **Next: Database migration Summary >> (2)**.
 
     > **Note**: If you see that table data cannot be migrated, the source table is empty. it is completely fine please select the tables that are not greyed out or the table has data in it.
 
-    ![The Migration Wizard Configure migration settings blade is displayed, with the expand arrow for PartsUnlimited highlighted, and all the tables checked.](media/m48.png "Migration Wizard Configure migration settings")
+    ![The Migration Wizard Configure migration settings blade is displayed, with the expand arrow for PartsUnlimited highlighted, and all the tables checked.](images/select-table-migrate.png "Migration Wizard Configure migration settings")
 
 1. On the migration wizard **Summary** blade, select **Start migration** and monitor the migration status on the overview page of Database Migration Service at **Migration Status**.
 
-    ![The Migration Wizard summary blade is displayed, with PartsUnlimitedDataMigration entered into the name field.](media/m49.png "Migration Wizard Summary")
+    ![The Migration Wizard summary blade is displayed, with PartsUnlimitedDataMigration entered into the name field.](images/migrate-summary.png "Migration Wizard Summary")
 
     ![The Migration Wizard summary blade is displayed, with PartsUnlimitedDataMigration entered into the name field.](media/m50.png "Migration Wizard Summary")
 
