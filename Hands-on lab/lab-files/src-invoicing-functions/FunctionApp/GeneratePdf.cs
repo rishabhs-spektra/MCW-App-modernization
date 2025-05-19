@@ -35,8 +35,10 @@ namespace Company.Function
             var browser = await Puppeteer.LaunchAsync(new LaunchOptions
             {
                 Headless = true,
-                ExecutablePath = appInfo.BrowserExecutablePath
+                ExecutablePath = appInfo.BrowserExecutablePath,
+                Args = new[] { "--no-sandbox", "--disable-setuid-sandbox" }
             });
+
             var page = await browser.NewPageAsync();
             await page.GoToAsync($"http://localhost:{appInfo.RazorPagesServerPort}/");
 
@@ -121,4 +123,3 @@ namespace Company.Function
         }
     }
 }
-
