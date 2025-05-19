@@ -67,7 +67,7 @@ In this hands-on lab, the architecture flow begins by using Azure Migrate to ass
  
 1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![](media/zoomin.png)
+   ![](media/api-0e9.png)
 
 ## Login to Azure Portal
 
@@ -121,6 +121,6 @@ Learner Support Contacts:
  
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-![](media/next-page.png "Next")
+![](media/api-090.png "Next")
 
 ## Happy Learning!!
