@@ -121,7 +121,7 @@ Start-Process -file 'C:\DataMigrationAssistant.msi' -arg '/qn /l*v C:\dma_instal
 
 # Download and install Integration Runtime
 $WebClient = New-Object System.Net.WebClient
-$WebClient.DownloadFile("https://download.microsoft.com/download/E/4/7/E4771905-1079-445B-8BF9-8A1A075D8A10/IntegrationRuntime_5.41.8909.1.msi","C:\IntegrationRuntime.msi")
+$WebClient.DownloadFile("https://download.microsoft.com/download/e/4/7/e4771905-1079-445b-8bf9-8a1a075d8a10/IntegrationRuntime_5.52.9231.1.msi","C:\IntegrationRuntime.msi")
 $msiPath = "C:\IntegrationRuntime.msi"
 $logPath = "C:\IntegrationRuntime_Install.log"
 
