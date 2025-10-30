@@ -21,22 +21,22 @@ You will be able to complete the following tasks:
 
 1. From your lab environment (**WebVM**), in the search bar, **Search (1)** for **RDP (2)** and **select** the **Remote Desktop Connection (3)** app.
    
-   ![](media/RDP-new.png)
+   ![](media/rdp1.png)
 
 2. Paste the **SQLVM DNS Name (1)** in the **Computer** field and click on **Connect (2)**.
    * **SQLVM DNS Name**: **<inject key="SQLVM DNS Name" style="color:blue" />**
 
-   ![](media/m-17.png)  
+   ![](media/rdp2.png) 
  
-3. Now, enter the SQLVM **Username (1)**, and **password (2)** provided below and then click on the **OK* (3)* button. Please add the **dot** and **back-slash** `.\` before the username.
+3. Now, enter the SQLVM **Username (1)**, and **password (2)** provided below and then click on the **OK (3)** button. Please add the **dot** and **back-slash** `.\` before the username.
    * **username**: **<inject key="SQLVM Username" style="color:blue" />** 
    * **password**: **<inject key="SQLVM Password" style="color:blue" />**
    
-   ![](media/m67.png) 
+   ![](media/rdp3.png) 
 
 4. Next, click on the **Yes** button to accept the certificate and add in trusted certificates.
 
-   ![](media/m--17.png)
+   ![](media/rdp4.png)
 
 ## Task 2: Perform assessment for migration to Azure SQL Database
 
@@ -382,4 +382,5 @@ In this exercise, you have migrated the on-premises database to Azure SQL Databa
 ### You have successfully completed the Exercise
 
 **Click Next to proceed to the Next exercise**
+
 
