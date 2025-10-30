@@ -52,11 +52,11 @@ Parts Unlimited would like an assessment to see what potential issues they might
 
     > **Note**: There is a known issue with screen resolution when using an RDP connection to Windows Server 2008 R2, which may affect some users. This issue presents itself as very small, hard to read text on the screen. The workaround for this is to use a second monitor for the RDP display, which should allow you to scale up the resolution to make the text larger.
 
-   ![](media/updated37u.png)
+   ![](media/dma.png)
 
 1. In the DMA dialog, select **+** from the left-hand menu to create a new project.
 
-   ![The new project icon is highlighted in DMA.](media/updated38.png "New DMA project")
+   ![](media/plusgetstared.png)
 
 1. In the New Project pane, set the name of the project **(1)** and make sure the following values are selected:
 
@@ -83,7 +83,7 @@ Parts Unlimited would like an assessment to see what potential issues they might
     - **Trust server certificate**: Check this box **(6)**.
     - Select **Connect (7)**.
 
-        ![In the Connect to a server dialog, the values specified above are entered into the appropriate fields.](images/m20new.png "Connect to a server")
+        ![](media/cnctsrvr.png)
 
 1. In the **Add sources** dialog that appears next, check the box for `PartsUnlimited` **(1)** and select **Add (2)**.
 
@@ -118,7 +118,7 @@ Parts Unlimited would like an assessment to see what potential issues they might
 
     * Password: <inject key="AzureAdUserPassword"></inject>
 
-        ![](images/login-password.png)
+        ![](media/srvrazpass.png)
 
 1. Click on **Yes**, if any pop up appears.
 
@@ -126,7 +126,7 @@ Parts Unlimited would like an assessment to see what potential issues they might
 
 1. Select your subscription **(1)** and the **partsunlimitedweb<inject key="DeploymentID" enableCopy="false"/>** Azure Migrate project **(2)**. Select **Upload (3)** to start the upload to Azure.
 
-    ![Upload to Azure Migrate page is open. Lab subscription and partsunlimited Azure Migrate Project are selected. Upload button is highlighted.](media/m26.png "Azure Migrate upload settings")
+    ![](media/updtsubslct.png)
 
     > **Note**: If you encounter **Failed to fetch subscription list from Azure, Strong Authentication is required (1)** you might not see some of your subscription because of MFA limitations. You should still be able to see your lab subscription.
 
@@ -382,5 +382,6 @@ In this exercise, you have migrated the on-premises database to Azure SQL Databa
 ### You have successfully completed the Exercise
 
 **Click Next to proceed to the Next exercise**
+
 
 
