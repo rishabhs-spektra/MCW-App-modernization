@@ -12,7 +12,7 @@ This lab is designed to provide participants with practical experience in migrat
 
 - **Review the Legacy On-Prem Application**: Explore the on-premises application to understand the current setup and prepare for migration to Azure App Service.
 - **Set up Azure Migrate for Assessment and Migration**: Configure Azure Migrate for the assessment and migration process, ensuring that all necessary tools and resources are available for a smooth migration.
-- **Migrate the On-prem Database to Azure**: Assess the on-prem database and migrate it to Azure SQL Database, ensuring compatibility and readiness for Azure's environment.
+- **Migrate the On-Prem Database to Azure**: Assess the on-prem database and migrate it to Azure SQL Database, ensuring compatibility and readiness for Azure's environment.
 - **Migrate the Web Application with App Service Migration Assistant**: Perform the assessment of the web application and migrate it to Azure App Service, ensuring readiness and compatibility with Azure’s environment.
 
 ## Prerequisites
@@ -29,7 +29,7 @@ Participants should have the following prerequisites:
 
 - **Access to virtual machines running on Azure**: Access to the WebVM and SQLVM for the assessment and migration process.
 
-## Architechture
+## Architecture
 
 The architecture for migrating .NET applications to Azure involves using **Azure Migrate** to assess on-premises applications and databases for migration. The **App Service Migration Assistant** evaluates the compatibility of the web application with **Azure App Service**, a fully managed platform for web app hosting. The application is then migrated to **Azure App Service**, and a corresponding **App Service Plan** defines the resources and scaling options for the hosted app. The application’s backend database is migrated to **Azure SQL Database**, providing a managed, scalable solution for data storage. All resources are organized within an **Azure Resource Group** to ensure efficient management and deployment. This architecture enables seamless migration, scalability, and management of web applications in the cloud.
 
@@ -65,7 +65,7 @@ Welcome to your Migrate .NET Apps to Azure App Service Lab! We've prepared a com
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-   ![Create storage by clicking confirm.](media/GS6.png)  
+   ![](media/labenvt.png)  
 
 ## Utilizing the Zoom In/Out Feature
 
@@ -81,26 +81,26 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-   ![Create storage by clicking confirm.](media/m63.png)
+   ![](media/guideenvt.png)
 
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-   ![](media/m64.png)
+   ![](media/splitwin.png)
  
 ## Managing Your Virtual Machine
  
-Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
+From the **Resources (1)** tab feel free to **start, stop, or restart (2)** your virtual machine. Your experience is in your hands!
  
-  ![](media/m65.png)
+  ![](media/rsrctab.png)
 
 ## Lab Validation
 
 1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-   ![Inline Validation](media/m68.png)
+   ![](media/validatecheck.png)
 
 1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
@@ -109,7 +109,7 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
  
 1. On your virtual machine, click on the Azure Portal icon as shown below:
  
-    ![](media/GS1.png)
+    ![](media/azportal.png)
  
 1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
@@ -121,17 +121,17 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-      ![](media/GS3.png "Enter Password")
+      ![](media/tpwrd.png)
 
 1. If you see the pop-up Action Required, click **Ask Later**.
 
-   ![](media/asklater.png)
+   ![](media/updtasklater.png)
 
    >**NOTE:** Do not enable MFA, select **Ask Later**.
  
 1. If you see the pop-up **Stay Signed in?**, click **No**.
 
-   ![](media/GS9.png)
+   ![](media/staysign.png)
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, **close** the window to continue the lab.
 
