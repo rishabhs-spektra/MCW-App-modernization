@@ -136,11 +136,7 @@ Parts Unlimited would like an assessment to see what potential issues they might
 
     ![Assessment Uploaded dialog shown.](media/m27.png "Assessment Uploaded")
 
-1. Minimize the **SQL VM** and return to the **Azure Migrate** page in the Azure portal.
-    
-1. Select the **Databases (only) (1)** page on Azure Migrate. Observe the number of assessed database instances **(2)** and the number of databases ready for Azure SQL DB **(2)**. Keep in mind that you might need to wait for 5 to 10 minutes for the results to show up. You can use the **Refresh** button on the page to see the latest status.
-
-    ![Azure Migrate Databases page is open. The number of assessed database instances and the number of databases ready for Azure SQL DB shows one.](media/dma-azure-migrate-web-2.1.png "Azure Migrate Database Assessment")
+1. Minimize the **SQL VM** and return to the Azure portal.
 
 ## Task 3: Retrieve connection information for SQL Databases (Optional)
 
@@ -382,6 +378,7 @@ In this exercise, you have migrated the on-premises database to Azure SQL Databa
 ### You have successfully completed the Exercise
 
 **Click Next to proceed to the Next exercise**
+
 
 
 
