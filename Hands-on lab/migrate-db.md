@@ -146,17 +146,17 @@ Parts Unlimited would like an assessment to see what potential issues they might
 
 In this task, you will retrieve the Fully Qualified Domain Name for the Azure SQL Database. This information is needed to connect to the Azure SQL Database from Azure Data Migration Service and Azure Data Migration Assistant.
 
-1. On the [Azure portal](https://portal.azure.com), from the **Search resources, services, and docs** blade, search for and select **SQL database (1)**, and then select **SQL database (2)** from the services.
+1. On the [Azure portal](https://portal.azure.com), from the **Search resources, services, and docs** blade, search for and select **SQL database (1)**, and then select **Azure SQL database (2)** from the services.
 
-   ![](media/m28.png)
+   ![](media/azsql.png)
 
-1. Navigate to your **SQL database** resource by selecting the **parts SQL database ** resource from the resources list.
+1. Navigate to your **SQL database** resource by selecting the **parts SQL database** resource from the resources list.
 
-   ![](media/updated44.png)
+   ![](media/partsdb.png)
 
 1. On the **Overview** Blade of your SQL database, copy the **Server name** and paste the value into a text editor, such as Notepad.exe, for later reference.
 
-   ![The server name value is highlighted on the SQL database Overview blade.](media/updated45.png "SQL database")
+   ![](media/cpsrvrname.png)
 
 ## Task 4: Migrate the database schema using the Data Migration Assistant
 
@@ -203,15 +203,15 @@ After you have reviewed the assessment results and you have ensured the database
 
 1. On the **Select objects** tab, leave all the objects checked **(1)**, and select **Generate SQL script (2)**.
 
-    ![The Select objects tab of the Data Migration Assistant is displayed, with all the objects checked.](media/m32.png "Data Migration Assistant Select target")
+    ![](media/selectobjecttab.png)
 
 1. On the **Script & deploy schema** tab, review the script. Notice the view also provides a note that there are no blocking issues **(1)**. Now, select **Deploy schema (2)**.
 
-    ![The Script & deploy schema tab of the Data Migration Assistant is displayed, with the generated script shown.](media/m33.png "Data Migration Assistant Script & deploy schema")
+    ![](media/deployschema.png)
 
 1. After the schema is deployed, review the deployment results, and ensure there are no errors.
 
-    ![The schema deployment results are displayed, with 23 commands executed and 0 errors highlighted.](media/updated48.png "Schema deployment results")
+    ![](media/dsresult.png)
 
 1. Click on Windows **Start** menu to launch **SQL Server Management Studio (SSMS)**.
 
@@ -223,11 +223,11 @@ After you have reviewed the assessment results and you have ensured the database
 
 1. Close the **Connect to Server** pop up.
 
-    ![](media/m35.png)
+    ![](media/popup.png)
 
 1. Connect to your Azure SQL Database, by selecting **Connect (1)->Database Engine (2)** in the **Object Explorer**.
 
-    ![](media/m36.png)
+    ![](media/cnctdben.png)
 
 1. Enter the following into the Connect to server dialog:
 
@@ -269,9 +269,9 @@ At this point, you have migrated the database schema using DMA. In this task, yo
    - **Target server type**: Select **Azure SQL Database** **(1)**.
    - **Migration mode**: Select **Offline** **(2)**.
    - **Configure runtime settings** **(3)**.
-   - When the **Configure integration runtime** pop-up appears, copy any one of the **two keys (4)** into a notebook.
+   - When the **Configure integration runtime** pop-up appears, copy any one of the **two keys (4)** to notepad.
 
-     ![The New migration project blade is displayed, with the values specified above entered into the appropriate fields.](images/Select_target_preapre.png "New migration project")
+     ![](media/configruntime2.png)
 
 1. Navigate back to the SQLVM, click the **Start** button. 
 
@@ -287,7 +287,7 @@ At this point, you have migrated the database schema using DMA. In this task, yo
 
 1. Click on **Finish**.
 
-   ![The Migration Wizard Select source blade is displayed, with the values specified above entered into the appropriate fields.](images/01-04-2024(11).png "Migration Wizard Select source")
+   ![](media/finish.png)
 
 1. Once the Integration Runtime (Self-hosted) node has been **registered successfully**, minimize the SQLVM RDP window.
     
@@ -331,7 +331,7 @@ At this point, you have migrated the database schema using DMA. In this task, yo
    
 1. Select **PartsUnlimited (1)** databases. Select **Next: Connect to target Azure SQL Database >> (2)** to continue.
     
-    ![The Migration Wizard Select database blade is displayed. PartsUnlimited databases is selected. Next: Select target >> button is highlighted.](images/select_destination.png "Migration Wizard Select databases")
+    ![](media/dbtomig.png)
 
 1. On the Migration Wizard **Select target** Blade, enter the following:
 
@@ -367,13 +367,13 @@ At this point, you have migrated the database schema using DMA. In this task, yo
 
     ![The Migration Wizard summary blade is displayed, with PartsUnlimitedDataMigration entered into the name field.](images/migrate-summary.png "Migration Wizard Summary")
 
-    ![The Migration Wizard summary blade is displayed, with PartsUnlimitedDataMigration entered into the name field.](media/m50.png "Migration Wizard Summary")
+    ![](media/creating.png)
 
     > The migration takes approximately 2 - 3 minutes to complete.
 
 1. When the migration is complete, you should see the status as **Succeeded**.
 
-    ![On the Migration job blade, the status of Completed is highlighted.](media/m50.png "Migration with Completed status")
+    ![](media/suceeded.png)
     
  ## Summary
  
@@ -382,6 +382,7 @@ In this exercise, you have migrated the on-premises database to Azure SQL Databa
 ### You have successfully completed the Exercise
 
 **Click Next to proceed to the Next exercise**
+
 
 
 
