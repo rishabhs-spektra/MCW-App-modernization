@@ -12,7 +12,7 @@ This lab is designed to provide participants with practical experience in migrat
 
 - **Review the Legacy On-Prem Application**: Explore the on-premises application to understand the current setup and prepare for migration to Azure App Service.
 - **Set up Azure Migrate for Assessment and Migration**: Configure Azure Migrate for the assessment and migration process, ensuring that all necessary tools and resources are available for a smooth migration.
-- **Migrate the On-prem Database to Azure**: Assess the on-prem database and migrate it to Azure SQL Database, ensuring compatibility and readiness for Azure's environment.
+- **Migrate the On-Prem Database to Azure**: Assess the on-prem database and migrate it to Azure SQL Database, ensuring compatibility and readiness for Azure's environment.
 - **Migrate the Web Application with App Service Migration Assistant**: Perform the assessment of the web application and migrate it to Azure App Service, ensuring readiness and compatibility with Azure’s environment.
 
 ## Prerequisites
