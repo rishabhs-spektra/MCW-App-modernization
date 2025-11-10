@@ -1,13 +1,13 @@
-## **Getting Started with MCW-APP-MODERNIZATION Workshop**
+## **Getting Started with APP MODERNIZATION Workshop**
  
-Welcome to your MCW-App-Modernization workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+Welcome to your App Modernization workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
 
  
 ## **Accessing Your Lab Environment**
  
 Once you're ready to dive in, your virtual machine and **Lab Guide** will be right at your fingertips within your web browser.
  
-![](media/GS6.png "Lab Environment")
+![](media/lab-01.png "Lab Environment")
 
 ## **Virtual Machine & Lab Guide**
  
@@ -15,21 +15,21 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 ## **Exploring Your Lab Resources**
  
-To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
+To get a better understanding of your lab resources and credentials, navigate to the **Environment** Details tab.
  
-![](./media/GS10.png)
+![](./media/lab-02.png)
  
 ## **Utilizing the Split Window Feature**
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** icon at the bottom right corner.
 
-![](./media/GS8.png)
+![](./media/lab-03.png)
  
 ## **Managing Your Virtual Machine**
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![](./media/GS5.png)
+![](./media/lab-04.png)
  
 ## **Let's Get Started with Azure Portal**
  
@@ -61,6 +61,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
     
 1. Now, click on **Next** from the lower right corner to move to the next page.
 
-   ![](./media/GS4.png)
+   ![](./media/lab-05.png)
 
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
