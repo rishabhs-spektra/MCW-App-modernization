@@ -2,6 +2,12 @@
 
 Duration: 80 minutes
 
+# Lab Scenario
+
+As a Cloud Migration Engineer at Parts Unlimited (Contoso), you have been tasked with modernizing the company's legacy database infrastructure by migrating an on-premises SQL Server 2008 R2 database to Azure SQL Database. In this exercise, you will assess the existing `PartsUnlimited` database using Microsoft Data Migration Assistant (DMA) to identify compatibility and feature parity issues before migration. After validating the assessment results and uploading them to Azure Migrate, you will migrate the database schema to Azure SQL Database, verify the migrated objects using SQL Server Management Studio (SSMS), and then use Azure Database Migration Service (DMS) to migrate the database data. By the end of this exercise, the PartsUnlimited database will be successfully migrated from the legacy on-premises environment to Azure SQL Database, enabling improved scalability, reliability, and cloud-based management.
+
+## Overview
+
 The next step of Part Unlimited's migration project is the assessment and migration of its database. Currently, the database lives on SQL Server 2008 R2 on a virtual machine. You will use an **Azure Migrate: Database Assessment** tool called **Microsoft Data Migration Assistant (DMA)** to assess the `PartsUnlimited` database for migration to Azure SQL Database. The assessment generates a report detailing any feature parity and compatibility issues between the on-premises database and Azure SQL Database. After the assessment, you will use an **Azure Migrate: Database Migration** service called **Azure Database Migration Service (DMS)**. During the exercise, you will use a simulated on-premises environment hosted on virtual machines running on Azure.
 ## Lab objectives
 
@@ -19,20 +25,21 @@ You will be able to complete the following tasks:
 
 ## Task 1: Connect to your SqlServer2008 VM with RDP
 
-1. From your lab environment (**WebVM**), in the search bar, **Search (1)** for **RDP (2)** and **select** the **Remote Desktop Connection (3)** app.
+1. From your lab environment (**WebVM**), in the search bar, **Search** for **RDP (1)** and **select** the **Remote Desktop Connection (2)** app.
    
    ![](media/rdp1.png)
 
-2. Paste the **SQLVM DNS Name (1)** in the **Computer** field and click on **Connect (2)**.
-   * **SQLVM DNS Name**: **<inject key="SQLVM DNS Name" style="color:blue" />**
+2. In the **Remote Desktop Connection** window, enter the provided **SQLVM DNS Name (1)** in the **Computer** field, and then select **Connect (2)** to establish a remote connection to the SQL Server virtual machine.
 
-   ![](media/rdp2.png) 
- 
+   - **SQLVM DNS Name**: **<inject key="SQLVM DNS Name" style="color:blue" />**
+
+        ![](media/rdp2.png)
+
 3. Now, enter the SQLVM **Username (1)**, and **password (2)** provided below and then click on the **OK (3)** button. Please add the **dot** and **back-slash** `.\` before the username.
-   * **username**: **<inject key="SQLVM Username" style="color:blue" />** 
-   * **password**: **<inject key="SQLVM Password" style="color:blue" />**
+   - **username**: **<inject key="SQLVM Username" style="color:blue" />** 
+   - **password**: **<inject key="SQLVM Password" style="color:blue" />**
    
-   ![](media/rdp3.png) 
+        ![](media/rdp3.png) 
 
 4. Next, click on the **Yes** button to accept the certificate and add in trusted certificates.
 
@@ -43,12 +50,8 @@ You will be able to complete the following tasks:
 Parts Unlimited would like an assessment to see what potential issues they might need to address in moving their database to Azure SQL Database. In this task, you will use the [Microsoft Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-2017) (DMA) to assess the `PartsUnlimited` database against Azure SQL Database (Azure SQL DB). Data Migration Assistant (DMA) enables you to upgrade to a modern data platform by detecting compatibility issues that can impact database functionality on your new version of SQL Server or Azure SQL Database. It recommends performance and reliability improvements for your target environment. The assessment generates a report detailing any feature parity and compatibility issues between the on-premises database and the Azure SQL DB service.
 
 > **Note**: The Database Migration Assistant is already installed on your Lab (Web) VM. If not found, it can be downloaded through Azure Migrate or from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=2090807) as well, and as Data Migration Assistant is dependent on .NET Framework 4.8 download and install .Net Framework from [here](https://go.microsoft.com/fwlink/?LinkId=2085155) and **restart** the VM before you install Data Migration Assistant.
-
-1. Launch DMA from the Windows. click on  **Start** menu.
-
-   ![Start menu.](media/m34.png "start")
   
-1. Start typing **"data migration" (1)** into the search bar, and then selecting **Microsoft Data Migration Assistant (2)** from the search results.
+1. Launch DMA from the Windows. click on  **Start (1)** menu.Start typing **"data migration" (2)** into the search bar, and then selecting **Microsoft Data Migration Assistant (3)** from the search results.
 
     > **Note**: There is a known issue with screen resolution when using an RDP connection to Windows Server 2008 R2, which may affect some users. This issue presents itself as very small, hard to read text on the screen. The workaround for this is to use a second monitor for the RDP display, which should allow you to scale up the resolution to make the text larger.
 
@@ -58,16 +61,16 @@ Parts Unlimited would like an assessment to see what potential issues they might
 
    ![](media/plusgetstared.png)
 
-1. In the New Project pane, set the name of the project **(1)** and make sure the following values are selected:
+1. In the New Project pane,make sure the following values are selected:
 
    - **Project type**: Select **Assessment (1)**.
-   - **Project name (1)**: Enter **Assessment (2)**
+   - **Project name**: Enter **Assessment (2)**
    - **Assessment type**: Select **Database Engine (3)**.
    - **Source server type**: Select **SQL Server (4)**.
    - **Target server type**: Select **Azure SQL Database (5)**.
    - Select **Create (6)**.
 
-   ![New project settings for doing an assessment of a migration from SQL Server to Azure SQL Database.](media/m18.png "New project settings")
+        ![New project settings for doing an assessment of a migration from SQL Server to Azure SQL Database.](media/m18.png "New project settings")
 
 1. On the **Options** screen, ensure **Check database compatibility (1)** and **Check feature parity (1)** are both checked, and then select **Next (2)**.
 
@@ -160,13 +163,15 @@ After you have reviewed the assessment results and you have ensured the database
 
 1. Return to the Data Migration Assistant, and select the New **(+)** icon in the left-hand menu.
 
+    ![](media/plusgetstared.png)
+
 1. In the New project dialog, enter the following:
 
-   - **Project type (1)**: Select **Migration (1)**.
-   - **Project name (2)**: Enter **Migration (2)**
+   - **Project type**: Select **Migration (1)**.
+   - **Project name**: Enter **Migration (2)**
    - **Source server type**: Select **SQL Server (3)**.
    - **Target server type**: Select **Azure SQL Database (4)**.
-   - **Migration scope (3)**: Select **Schema only (5)**.
+   - **Migration scope**: Select **Schema only (5)**.
    - Select **Create (6)**.
 
         ![The above information is entered in the New project dialog box.](media/m29.png "New Project dialog")
@@ -184,6 +189,8 @@ After you have reviewed the assessment results and you have ensured the database
 
         ![The Select source tab of the Data Migration Assistant is displayed, with the values specified above entered into the appropriate fields.](media/m30.png "Data Migration Assistant Select source")
 
+        ![The Select source tab of the Data Migration Assistant is displayed, with the values specified above entered into the appropriate fields.](media/m30-ii.png "Data Migration Assistant Select source")
+
 1. On the **Select target** tab, enter the following:
 
    - **Server name**: Enter the server name of your Azure SQL Database - **<inject key="sqlDatabaseName" enableCopy="false"/>.database.windows.net (1)** 
@@ -197,25 +204,23 @@ After you have reviewed the assessment results and you have ensured the database
 
         ![The Select target tab of the Data Migration Assistant is displayed, with the values specified above entered into the appropriate fields.](media/m31.png "Data Migration Assistant Select target")
 
+        > **Note**: If you encounter an error while connecting to the target database, use the Azure SQL Database **Server name** that you copied in **Task 3** and paste it into the **Server name** field, then try connecting again.
+
 1. On the **Select objects** tab, leave all the objects checked **(1)**, and select **Generate SQL script (2)**.
 
-    ![](media/selectobjecttab.png)
+    ![](media/task4step5.png)
 
-1. On the **Script & deploy schema** tab, review the script. Notice the view also provides a note that there are no blocking issues **(1)**. Now, select **Deploy schema (2)**.
+1. On the **Script & deploy schema** tab, review the script. Notice the view also provides a note that there are no blocking issues. Now, select **Deploy schema (1)**.
 
-    ![](media/deployschema.png)
+    ![](media/task4step6.png)
 
 1. After the schema is deployed, review the deployment results, and ensure there are no errors.
 
     ![](media/dsresult.png)
 
-1. Click on Windows **Start** menu to launch **SQL Server Management Studio (SSMS)**.
+1. From the **Start (1)** menu, search for **SQL Server Management Studio (2)**, and then select **SQL Server Management Studio 20 (SSMS)** from the search results to launch the application.
 
-    ![](media/m34.png)
-
-1. Start typing **sql server management** **(1)** into the search bar, and then selecting **SQL Server Management Studio 18 (2)** in the search results.
-
-    ![](media/appmod-dma.png)
+   ![](media/sqlserver.png)
 
 1. Close the **Connect to Server** pop up.
 
@@ -269,9 +274,9 @@ At this point, you have migrated the database schema using DMA. In this task, yo
 
      ![](media/configruntime2.png)
 
-1. Navigate back to the SQLVM, click the **Start** button. 
+1. Close the browser, click the **search** button. 
 
-    ![](media/m34.png)
+    ![](media/m34-i.png)
 
 1. In the search box, type **Microsoft Integration Runtime** **(1)** then select **Microsoft Integration Runtime** **(2)** from the search results.
 
@@ -285,7 +290,7 @@ At this point, you have migrated the database schema using DMA. In this task, yo
 
    ![](media/finish.png)
 
-1. Once the Integration Runtime (Self-hosted) node has been **registered successfully**, minimize the SQLVM RDP window.
+1. Once the Integration Runtime (Self-hosted) node has been **registered successfully**.
     
     ![](images/Microsoft_Integration_Runtime_auth.png)
 
