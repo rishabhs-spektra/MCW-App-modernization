@@ -2,6 +2,12 @@
 
 ### Overall Estimated Duration: 4 hours
 
+## Lab Scenario
+
+Contoso Ltd. is planning to modernize its legacy on-premises .NET web application and database infrastructure by migrating them to Microsoft Azure. The existing application is hosted on Internet Information Services (IIS) and relies on a SQL Server database running in the company’s datacenter. To improve scalability, availability, and operational efficiency, Contoso has decided to move its application workloads to Azure App Service and Azure SQL Database.
+
+In this hands-on lab, you will act as a Cloud Migration Consultant and help Contoso assess, plan, and execute the migration of its .NET application to Azure. You will review the existing application environment, configure Azure Migrate to assess migration readiness, migrate the backend database to Azure SQL Database, and use App Service Migration Assistant to evaluate and migrate the web application to Azure App Service. By the end of this lab, you will have successfully modernized the application architecture, enabling Contoso to benefit from a fully managed, scalable, and cloud-native hosting platform.
+
 ## Overview
 
 The migration of .NET applications to Azure involves a series of steps to assess, plan, and execute the transition to cloud infrastructure. By using tools like Azure Migrate and App Service Migration Assistant, you can efficiently evaluate the compatibility of on-premises applications with Azure services. This process includes assessing web applications hosted on IIS, migrating databases to Azure SQL Database, and deploying web applications to Azure App Service for enhanced scalability and performance. These steps empower businesses to modernize their applications, ensuring they are optimized for the cloud and ready for future growth.
