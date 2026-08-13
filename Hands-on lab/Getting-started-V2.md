@@ -45,7 +45,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
 1. Next, provide your password:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Password:** <inject key="AzureAdUserPassword"></inject>
  
         ![](media/GS3.png "Enter Password")
 

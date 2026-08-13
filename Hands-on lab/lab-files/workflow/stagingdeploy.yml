@@ -13,7 +13,9 @@ env:
   
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    # windows-latest is required: the .NET Core 3.1 SDK needs OpenSSL 1.1 (libssl1.1),
+    # which no longer ships on the ubuntu-latest runner image.
+    runs-on: windows-latest
     # env:
     #   working-directory: ./src/PartsUnlimitedWebsite
     steps:
