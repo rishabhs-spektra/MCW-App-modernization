@@ -147,13 +147,13 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco feature enable -n allowGlobalConfirmation
 choco install dotnetfx -y -force
 
-# Download and install Data Mirgation Assistant
-(New-Object System.Net.WebClient).DownloadFile('https://download.microsoft.com/download/C/6/3/C63D8695-CEF2-43C3-AF0A-4989507E429B/DataMigrationAssistant.msi', 'C:\DataMigrationAssistant.msi')
-Start-Process -file 'C:\DataMigrationAssistant.msi' -arg '/qn /l*v C:\dma_install.txt' -passthru | wait-process
+# Download and install SQL Server Management Studio 22 (SSMS)
+Invoke-WebRequest -Uri 'https://aka.ms/ssms/22/release/vs_SSMS.exe' -OutFile 'C:\vs_SSMS.exe' -UseBasicParsing
+Start-Process -file 'C:\vs_SSMS.exe' -arg '--quiet --norestart --wait --log C:\ssms_install.txt' -passthru | wait-process
 
 Sleep 50
-Invoke-WebRequest 'https://download.microsoft.com/download/C/6/3/C63D8695-CEF2-43C3-AF0A-4989507E429B/DataMigrationAssistant.msi' -OutFile 'C:\DataMigrationAssistant.msi'
-Start-Process -file 'C:\DataMigrationAssistant.msi' -arg '/qn /l*v C:\dma_install.txt' -passthru | wait-process
+Invoke-WebRequest -Uri 'https://aka.ms/ssms/22/release/vs_SSMS.exe' -OutFile 'C:\vs_SSMS.exe' -UseBasicParsing
+Start-Process -file 'C:\vs_SSMS.exe' -arg '--quiet --norestart --wait --log C:\ssms_install.txt' -passthru | wait-process
 
 $adminPassword = "demo!pass123"
 

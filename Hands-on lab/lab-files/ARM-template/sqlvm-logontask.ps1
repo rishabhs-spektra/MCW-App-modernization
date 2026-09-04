@@ -1,4 +1,3 @@
-
 Start-Transcript -Path C:\WindowsAzure\Logs\CloudLabsCustomScriptExtension21.txt -Append
 
 Set-ExecutionPolicy -ExecutionPolicy bypass -Force
@@ -107,9 +106,9 @@ else
 Wait-Install
 Write-Host "Installing Edge..."
 Start-Process -file 'C:\MicrosoftEdgeEnterpriseX64.msi' -arg '/qn /l*v C:\edge_install.txt' -passthru | wait-process
-# Download and install Data Mirgation Assistant
-(New-Object System.Net.WebClient).DownloadFile('https://download.microsoft.com/download/C/6/3/C63D8695-CEF2-43C3-AF0A-4989507E429B/DataMigrationAssistant.msi', 'C:\DataMigrationAssistant.msi')
-Start-Process -file 'C:\DataMigrationAssistant.msi' -arg '/qn /l*v C:\dma_install.txt' -passthru | wait-process
+# Download and install SQL Server Management Studio 22 (SSMS)
+Invoke-WebRequest -Uri 'https://aka.ms/ssms/22/release/vs_SSMS.exe' -OutFile 'C:\vs_SSMS.exe' -UseBasicParsing
+Start-Process -file 'C:\vs_SSMS.exe' -arg '--quiet --norestart --wait --log C:\ssms_install.txt' -passthru | wait-process
 
 # Download 3.1.4 SDK
 (New-Object System.Net.WebClient).DownloadFile('https://download.visualstudio.microsoft.com/download/pr/70062b11-491c-403c-91db-9d84462ee292/5db435e39128cbb608e76bf5111ab3dc/dotnet-sdk-3.1.413-win-x64.exe', 'C:\dotnet-sdk-3.1.413-win-x64.exe')
